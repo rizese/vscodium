@@ -26,7 +26,7 @@ index d7f98f6..ed54042 100644
 --- a/src/vs/code/electron-sandbox/issue/issueReporterService.ts
 +++ b/src/vs/code/electron-sandbox/issue/issueReporterService.ts
 @@ -517,5 +517,5 @@ export class IssueReporter extends Disposable {
- 
+
 -	private searchVSCodeIssues(title: string, issueDescription?: string): void {
 +	private searchVSCodeIssues(title: string, _issueDescription?: string): void {
  		if (title) {
@@ -34,7 +34,7 @@ index d7f98f6..ed54042 100644
 +			this.searchGitHub('VSCodium/vscodium', title);
  		} else {
 @@ -611,33 +611,2 @@ export class IssueReporter extends Disposable {
- 
+
 -	@debounce(300)
 -	private searchDuplicates(title: string, body?: string): void {
 -		const url = 'https://vscode-probot.westus.cloudapp.azure.com:7890/duplicate_candidates';
@@ -70,7 +70,7 @@ index d7f98f6..ed54042 100644
 @@ -729,3 +698,3 @@ export class IssueReporter extends Disposable {
  		sourceSelect.append(this.makeOption('', localize('selectSource', "Select source"), true));
 -		sourceSelect.append(this.makeOption('vscode', localize('vscode', "Visual Studio Code"), false));
-+		sourceSelect.append(this.makeOption('vscode', localize('vscode', "VSCodium"), false));
++		sourceSelect.append(this.makeOption('vscode', localize('vscode', "Codium"), false));
  		sourceSelect.append(this.makeOption('extension', localize('extension', "An extension"), false));
 diff --git a/src/vs/workbench/contrib/extensions/electron-sandbox/extensionsSlowActions.ts b/src/vs/workbench/contrib/extensions/electron-sandbox/extensionsSlowActions.ts
 index 87839a6..49727fc 100644
@@ -80,4 +80,4 @@ index 87839a6..49727fc 100644
  - OS Version: \`${osVersion}\`
 -- VS Code version: \`${this._productService.version}\`\n\n${message}`);
 +- VSCodium version: \`${this._productService.version}\`\n\n${message}`);
- 
+
