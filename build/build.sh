@@ -5,7 +5,7 @@
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./build/build.sh
 ###
 nvm use
-export APP_NAME="Codium"
+export APP_NAME="Codium Editor"
 export CI_BUILD="no"
 export SHOULD_BUILD="yes"
 export SKIP_ASSETS="yes"
