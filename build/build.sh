@@ -4,7 +4,7 @@
 ### Windows
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./build/build.sh
 ###
-nvm use
+. use_node.sh
 export APP_NAME="Codium Editor"
 export CI_BUILD="no"
 export SHOULD_BUILD="yes"
