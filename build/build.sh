@@ -4,7 +4,7 @@
 ### Windows
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./build/build.sh
 ###
-. use_node.sh
+export SCRIPT_DIR=$(dirname "$0")
 export APP_NAME="Codium Editor"
 export CI_BUILD="no"
 export SHOULD_BUILD="yes"
@@ -13,6 +13,9 @@ export SKIP_BUILD="no"
 export SKIP_SOURCE="no"
 export VSCODE_LATEST="no"
 export VSCODE_QUALITY="stable"
+
+# Use correct Node version
+. "$SCRIPT_DIR/use_node.sh"
 
 while getopts ":ilops" opt; do
   case "$opt" in
